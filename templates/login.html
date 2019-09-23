@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+  <header style="padding:10px">
+    <center>Welcome</center>
+  </header>
+
+<container style="width:100%">
+  <div style="width:50%;margin:0 auto">
+      <form action="/dashboard" method="POST">
+        <div class="form-group">
+          <label for="email">Name:</label>
+          <input class="form-control" name ='user_name' id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" name="user_pass" id="pwd">
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  </div>
+</container>
+{% endblock %}

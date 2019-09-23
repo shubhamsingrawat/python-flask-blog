@@ -1,0 +1,18 @@
+{
+  "params": {
+    "local_server": "True",
+    "local_uri":"mysql://root:@localhost/codingblog",
+    "prod_uri": "mysql://root:@localhost/codingblog",
+    "fb-user" : "https://facebook.com",
+    "gmail-user": "shubrawat888@gmail.com",
+    "gmail-password": "Mummy@123",
+    "guest": ["shubrawat96@gmail.com","shubrawat888@gmail.com","jainshree6364@gmail.com"],
+    "about-text": "hey i am Shubham",
+    "no-of-posts": 2,
+    "admin_user": "shub",
+    "admin_pass": "shub123",
+    "upload_location": "C:\\Users\\lenovo\\Desktop\\Blog\\static\\uploads"
+
+  }
+
+}

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+ {% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{url_for('static',filename='img/home-bg.jpg')}})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Welcome to Dashboard</h1>
+            <span class="subheading">A Blog by Sperbpeople</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<div class="dtable container">
+
+    <div>
+        <h2 style="text-align:center">Basic Actions</h2>
+        <div class="row">
+            <div class="col-md-10"><a href="/edit/0"><button class="btn btn-primary btn-md">Add Post</button></a></div>
+            <div style="float:right;"><a href="/logout"><button class="btn btn-primary btn-md">LogOut</button></a></div>
+        </div>
+        <br>
+        <hr>
+    </div>
+    <!--<div>-->
+        <!--<form action="/uploader" method="post" enctype="multipart/form-data">-->
+            <!--<input type="file" name="img_file"/>-->
+            <!--<button class="btn btn-primary" type="submit" value="uploader">submit</button>-->
+        <!--</form>-->
+
+    <!--</div>-->
+  <div style="margin:0">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>sno</th>
+            <th>title</th>
+            <th>date</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+      {% for post in posts %}
+          <tbody>
+            <tr>
+              <td>{{post.sno}}</td>
+              <td>{{post.title}}</td>
+              <td>{{post.date}}</td>
+              <td><a href="/edit/{{post.sno}}"><button class="btn btn-primary">EDIT</button></a></td>
+              <td><a href="/delete/{{post.sno}}"><button class="btn btn-primary">DELETE</button></a></td>
+            </tr>
+           <tbody>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+
+{% endblock %}
